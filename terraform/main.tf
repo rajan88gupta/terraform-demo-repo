@@ -1,8 +1,8 @@
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe01e"
-  instance_type = "t2.micro"
-
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+  enable_dns_support = true
+  enable_dns_hostnames = true
   tags = {
-    Name = "ExampleInstance"
+    Name = "main-vpc"
   }
 }
